@@ -721,9 +721,9 @@ func (n *Node) GetStats() map[string]string {
 
 	lastConsensusRound := n.core.GetLastConsensusRound()
 	var consensusRoundsPerSecond float64
-	if lastConsensusRound > poset.RoundNIL {
+//	if lastConsensusRound > poset.RoundNIL {
 		consensusRoundsPerSecond = float64(lastConsensusRound+1) / timeElapsed.Seconds()
-	}
+//	}
 
 	s := map[string]string{
 		"last_consensus_round":    toString(lastConsensusRound),
